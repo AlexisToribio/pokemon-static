@@ -1,8 +1,11 @@
 import NextLink from 'next/link';
+import { useContext } from 'react';
 import { Image, Spacer, Text, useTheme, Link } from '@nextui-org/react';
+import { FavoriteContext } from '../../context/favoriteContext';
 
 export const Navbar = () => {
   const { theme } = useTheme();
+  const { favoritePokemons } = useContext(FavoriteContext);
 
   return (
     <div
@@ -36,7 +39,7 @@ export const Navbar = () => {
       <NextLink href="/favorites" passHref>
         <Link css={{ marginRight: '10px' }}>
           <Text color="white" h3>
-            Favoritos
+            Favoritos {favoritePokemons.length}
           </Text>
         </Link>
       </NextLink>
