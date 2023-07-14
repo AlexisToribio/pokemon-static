@@ -12,10 +12,11 @@ export const Navbar = () => {
       style={{
         display: 'flex',
         width: '100%',
+        minWidth: '320px',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'start',
-        padding: '0px 50px',
+        padding: '0px 15px',
         backgroundColor: theme?.colors.gray50.value,
       }}
     >
@@ -24,8 +25,8 @@ export const Navbar = () => {
           <Image
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
             alt="icono de la app"
-            width={70}
-            height={70}
+            width={50}
+            height={50}
           />
           <Text color="white" h2>
             P
@@ -38,7 +39,7 @@ export const Navbar = () => {
       <Spacer css={{ flex: 1 }} />
       <NextLink href="/favorites" passHref>
         <Link css={{ marginRight: '10px' }}>
-          <Text color="white" h3>
+          <Text color="white" h3 css={{ margin: '0px' }}>
             Favoritos {favoritePokemons.length}
           </Text>
         </Link>

@@ -30,7 +30,7 @@ export const Layout = ({ children, title }: Props) => {
 
       <Navbar />
 
-      <main style={{ padding: '0px 20px' }}>{children}</main>
+      <main style={{ minWidth: '320px', padding: '0px 20px' }}>{children}</main>
     </>
   );
 };
